@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "git checkout dev && git add -A && git commit -m 'dev' && git push origin dev",
-    "prod": "git checkout dev && git fetch origin master && git merge master && git push origin dev:master && git fetch origin master:master"
+    "push:dev": "git checkout dev && git add -A && git commit -m 'dev' && git push origin dev",
+    "push:prod": "git checkout dev && git fetch origin master && git merge master && git push origin dev:master && git fetch origin master:master"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -20,8 +20,8 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint": "^7.23.0",
+    "eslint-plugin-vue": "^7.8.0"
   },
   "eslintConfig": {
     "root": true,

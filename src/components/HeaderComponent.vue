@@ -3,19 +3,16 @@
     <nav class="navbar">
       <div class="navbar_menu">
         <router-link to="/">Home</router-link>
+         <router-link to="/cerimonia">Cerimonia</router-link>
+          <router-link to="/ricevimento">Ricevimento</router-link>
       </div>
+        <router-view></router-view>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  props: {
-    content: {
-      type: Object,
-      required: true,
-    },
-  },
 };
 </script>
 
