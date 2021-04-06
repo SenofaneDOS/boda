@@ -1,14 +1,16 @@
 <template>
   <main>
     <HeaderComponent />
+    <FooterComponent />
   </main>
 </template>
 
 <script>
-import HeaderComponent from "./components/HeaderComponent";
+import HeaderComponent from "./components/layout/HeaderComponent";
+import FooterComponent from "./components/layout/FooterComponent";
 
 export default {
-  components: {HeaderComponent}
+  components: {HeaderComponent, FooterComponent}
 
 }
 </script>
