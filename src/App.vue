@@ -1,8 +1,7 @@
 <template>
-  <main>
     <HeaderComponent />
+      <router-view></router-view>
     <FooterComponent />
-  </main>
 </template>
 
 <script>
