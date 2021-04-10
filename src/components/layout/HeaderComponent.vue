@@ -1,12 +1,11 @@
 <template>
   <header class="header top-0 z-10 fixed h-20 w-auto justify-between mt-0">
     <nav class="navbar">
-      <div class="navbar_menu">
-        <router-link to="/">Home</router-link>
-         <router-link to="/cerimonia">Cerimonia</router-link>
-          <router-link to="/ricevimento">Ricevimento</router-link>
-      </div>
-        <router-view></router-view>
+      <ul class="navbar_menu flex">
+       <li> <router-link to="/"><span>Home</span></router-link></li>
+        <li>  <router-link to="/cerimonia"><span>Cerimonia</span></router-link></li>
+        <li>   <router-link to="/ricevimento"><span>Ricevimento</span></router-link></li>
+      </ul>
     </nav>
   </header>
 </template>
