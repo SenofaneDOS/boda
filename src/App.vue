@@ -1,15 +1,16 @@
 <template>
     <HeaderComponent />
-      <router-view></router-view>
+     <MainComponent />
     <FooterComponent />
 </template>
 
 <script>
 import HeaderComponent from "./components/layout/HeaderComponent";
+import MainComponent from "./components/layout/MainComponent";
 import FooterComponent from "./components/layout/FooterComponent";
 
 export default {
-  components: {HeaderComponent, FooterComponent}
+  components: {HeaderComponent, MainComponent, FooterComponent}
 
 }
 </script>
