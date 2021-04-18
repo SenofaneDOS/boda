@@ -1,11 +1,20 @@
 <template>
-	<div class="w-full flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
-		<div class="background-lantern w-full absolute top-0"><img class="w-full" src="../assets/image/bulb-light-chain.png"></div>
+	<div class="w-full flex flex-col items-center h-auto mx-auto">
+	<image-component class="w-screen relative -left-2 -top-40" lantern color="text-white"></image-component>
+	<div class="flex flex-row w-full justify-between px-10">
+		<image-component class="" maria size="w-56" color="text-white"></image-component>
+		<image-component class="" stefano size="w-56" color="text-white"></image-component>
+	</div>
 	</div>
 </template>
 
 <script>
+
+import ImageComponent from "../components/global/ImageComponent";
+
 export default {
-};
+  components: { ImageComponent }
+
+}
 </script>
 

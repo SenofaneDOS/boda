@@ -5,9 +5,11 @@ module.exports = {
     extend: {
       colors: {
         first: '#363636',
-        second: '#faf1dc',
-        third: '#2a9d8f',
+        second: '#2e2d2a',
       },
+      boxShadow: {
+        cornice: 'inset 0px 0px 0 15px #888888'
+      }
     },
   },
   variants: {
