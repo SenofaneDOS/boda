@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-second shadow-cornice pt-20 pb-8 pl-8 pr-8">
+  <main class="bg-second shadow-cornice pt-20 pb-8 pl-8 pr-8 overflow-x-hidden">
     <router-view />
   </main>
 </template>

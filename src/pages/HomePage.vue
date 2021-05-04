@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col items-center h-auto mx-auto">
     <image-component
-      class="w-screen relative -left-2 -top-40"
+      class="relative transform scale-110 -translate-y-40"
       lantern
       color="text-white"
     />

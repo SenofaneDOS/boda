@@ -4,7 +4,7 @@
     class="image-container"
   >
     <svg
-      id="Livello_1"
+      :class="`image-lantern fill-current ${size} ${color}`"
       version="1.1"
       baseProfile="basic"
       xmlns="http://www.w3.org/2000/svg"
