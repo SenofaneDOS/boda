@@ -1,7 +1,7 @@
 <template>
-    <HeaderComponent />
-     <MainComponent />
-    <FooterComponent />
+  <HeaderComponent />
+  <MainComponent />
+  <FooterComponent />
 </template>
 
 <script>

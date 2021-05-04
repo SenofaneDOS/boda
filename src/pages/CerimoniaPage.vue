@@ -1,8 +1,8 @@
 <template>
-    <div>cerimoniaa</div>
+  <div>cerimoniaa</div>
 </template>
 <script>
 export default {
-    
+
 }
 </script>
