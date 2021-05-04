@@ -1,17 +1,21 @@
 <template>
-  <div class="w-full flex flex-col items-center h-auto mx-auto">
+  <div class="home-head w-full items-center h-auto mx-auto">
     <image-component
-      class="relative transform scale-110 -translate-y-40"
+      class="transform h-96 scale-110 -translate-y-80"
       lantern
       color="text-white"
     />
-    <div class="flex flex-row w-full justify-between px-10">
+    <div class="home-body w-full flex flex-row justify-between items-center">
       <image-component
         class=""
         maria
         size="w-56"
         color="text-white"
       />
+      <div class="text-container grid gap-10 text-center text-7xl text-white">
+        <span> Maria & Stefano</span>
+        <count-down-component deadline="08/09/2021" />
+      </div>
       <image-component
         class=""
         stefano
@@ -25,8 +29,8 @@
 <script>
 
 import ImageComponent from '../components/global/ImageComponent'
-
+import CountDownComponent from '../components/global/CountDownComponent.vue'
 export default {
-  components: { ImageComponent }
+  components: { ImageComponent,CountDownComponent }
 }
 </script>
