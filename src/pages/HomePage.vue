@@ -13,8 +13,7 @@
 import ImageComponent from "../components/global/ImageComponent";
 
 export default {
-  components: { ImageComponent }
-
+  components: { ImageComponent },
 }
 </script>
 

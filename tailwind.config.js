@@ -4,11 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        first: '#363636',
+        first: '#888888',
         second: '#2e2d2a',
       },
       boxShadow: {
-        cornice: 'inset 0px 0px 0 15px #888888'
+        cornice: 'inset 0px 0px 0 15px #888888',
+      },
+      borderWidth: {
+        '15': '15px'
       }
     },
   },
