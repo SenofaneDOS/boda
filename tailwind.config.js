@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily:{ 
+       'body': ['Core-Deco']
+      },
       colors: {
         first: '#888888',
         second: '#2e2d2a',
