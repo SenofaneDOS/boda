@@ -10,6 +10,7 @@
     "push:prod": "git checkout dev && git fetch origin master && git merge master && git push origin dev:master && git fetch origin master:master"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.6"
