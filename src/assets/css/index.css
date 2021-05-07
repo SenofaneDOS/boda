@@ -9,6 +9,13 @@
         font-display: swap;
         src: url('../fonts/Rosematty-Script.woff') format('woff');
         }
+    @font-face {
+        font-family: 'Core-Deco';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('../fonts/Core-Deco.woff') format('woff');
+        }
 }
 html, body, #app {
     font-family: 'Rosematty';

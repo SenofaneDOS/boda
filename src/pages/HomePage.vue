@@ -5,16 +5,16 @@
       lantern
       color="text-white"
     />
-    <div class="home-body w-full flex flex-row justify-between items-center">
+    <div class="home-body w-full flex flex-row justify-around items-center">
       <image-component
         class=""
         maria
         size="w-56"
         color="text-white"
       />
-      <div class="text-container grid gap-10 text-center text-7xl text-white">
+      <div class="text-container grid gap-10 text-center text-9xl text-white">
         <span> Maria & Stefano</span>
-        <count-down-component deadline="09/08/2021" />
+        <span class="font-body text-4xl">8 settembre 2021</span>
       </div>
       <image-component
         class=""
@@ -22,6 +22,9 @@
         size="w-56"
         color="text-white"
       />
+    </div>
+    <div id="countdown">
+      <count-down-component deadline="09/08/2021" />
     </div>
   </div>
 </template>
@@ -31,6 +34,6 @@
 import ImageComponent from '../components/global/ImageComponent'
 import CountDownComponent from '../components/global/CountDownComponent.vue'
 export default {
-  components: { ImageComponent,CountDownComponent }
+  components: { ImageComponent, CountDownComponent }
 }
 </script>
