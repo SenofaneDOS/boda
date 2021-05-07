@@ -26,6 +26,7 @@
     <div id="countdown">
       <count-down-component deadline="09/08/2021" />
     </div>
+    <CardComponent />
   </div>
 </template>
 
@@ -33,7 +34,8 @@
 
 import ImageComponent from '../components/global/ImageComponent'
 import CountDownComponent from '../components/global/CountDownComponent.vue'
+import CardComponent from '../components/global/CardComponent.vue'
 export default {
-  components: { ImageComponent, CountDownComponent }
+  components: { ImageComponent, CountDownComponent, CardComponent }
 }
 </script>
