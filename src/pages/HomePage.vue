@@ -14,7 +14,7 @@
       />
       <div class="text-container grid gap-10 text-center text-7xl text-white">
         <span> Maria & Stefano</span>
-        <count-down-component deadline="08/09/2021" />
+        <count-down-component deadline="09/08/2021" />
       </div>
       <image-component
         class=""
