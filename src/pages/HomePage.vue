@@ -29,6 +29,8 @@
     <CardComponent />
 
     <PlaylistComponent />
+
+    <RSVPComponent />
   </div>
 </template>
 
@@ -38,9 +40,10 @@ import ImageComponent from '../components/global/ImageComponent'
 import CountDownComponent from '../components/global/CountDownComponent.vue'
 import CardComponent from '../components/global/CardComponent.vue'
 import PlaylistComponent from '../components/global/PlaylistComponent.vue'
+import RSVPComponent from '../components/global/RSVPComponent.vue'
 
 export default {
-  components: { ImageComponent, CountDownComponent, CardComponent, PlaylistComponent },
+  components: { ImageComponent, CountDownComponent, CardComponent, PlaylistComponent, RSVPComponent },
 
 }
 </script>
