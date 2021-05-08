@@ -1,5 +1,5 @@
 <template>
-  <div class="home-head w-full items-center h-auto mx-auto">
+  <div class="home-head w-full items-center h-auto mx-auto w-auto">
     <image-component
       class="transform h-96 scale-110 -translate-y-80"
       lantern
@@ -27,6 +27,8 @@
       <count-down-component deadline="09/08/2021" />
     </div>
     <CardComponent />
+
+    <PlaylistComponent />
   </div>
 </template>
 
@@ -35,7 +37,10 @@
 import ImageComponent from '../components/global/ImageComponent'
 import CountDownComponent from '../components/global/CountDownComponent.vue'
 import CardComponent from '../components/global/CardComponent.vue'
+import PlaylistComponent from '../components/global/PlaylistComponent.vue'
+
 export default {
-  components: { ImageComponent, CountDownComponent, CardComponent }
+  components: { ImageComponent, CountDownComponent, CardComponent, PlaylistComponent },
+
 }
 </script>

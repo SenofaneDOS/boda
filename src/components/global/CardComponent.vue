@@ -13,7 +13,10 @@
           Cerimonia
         </h3>
         <p class="font-body p-5 text-second">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
+          San leonardo murialdo, sicuramente non una delle chiese più belle che questa capitale può offrirci anzi, un professore universitario l'ha definita una delle più brutte d'italia (storia vera), ma non per questo l'abbiamo scelta, ovviamente per noi ha un enorme valore affettivo
+          <br>
+          <br>
+          <span class="font-bold"> mercoledì, 8 settembre 2021 | ore 15 <br> Via Salvatore Pincherle, 144 – Roma</span>
         </p>
       </div>
     </div>
@@ -30,7 +33,10 @@
           Ricevimento
         </h3>
         <p class="font-body p-5 text-second">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
+          Il conventino di Mentana, sito ovviamente a Mentana rappresenta al meglio il connubio storia e modernità. Mix di design, storia e arte o almeno così c'è scritto sul loro sito, noi non ci capiamo poi molto ci è piaciuto e speriamo piaccia anche a voi.
+          <br>
+          <br>
+          <span class="font-bold"> mercoledì, 8 settembre 2021 | ore 18 <br> Via del Conventino, 96 – Mentana</span>
         </p>
       </div>
     </div>
