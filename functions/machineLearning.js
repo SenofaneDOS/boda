@@ -9,7 +9,7 @@ exports.handler = (event, context, callback) => {
     "Azzeccata",
     "Bella idea, grazie!"
   ];
-  const random = Math.floor(Math.random() * frasi.length);
+  const random = ~~(Math.random() * (frasi.length - 0)) + 0
 
   return callback(null, {
     statusCode: 200,

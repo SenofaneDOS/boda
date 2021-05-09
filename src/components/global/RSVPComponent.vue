@@ -95,8 +95,6 @@ methods:{
           messaggio : $("#messaggio").val()
 				}
 			)
-			// $("#playlistText").val("");
-      //porcatona megagalattica della morte fotonica
       $('.hover_bkgr_fricc').click(function(){
         $('.hover_bkgr_fricc').hide();
       });

@@ -1,16 +1,5 @@
 <template>
-  <HeaderComponent />
-  <MainComponent />
-  <FooterComponent />
+  <main class="relative h-full pt-20 pb-8 pl-8 pr-8 shadow-cornice overflow-x-hidden bg-second ">
+    <router-view />
+  </main>
 </template>
-
-<script>
-import HeaderComponent from "./components/layout/HeaderComponent";
-import MainComponent from "./components/layout/MainComponent";
-import FooterComponent from "./components/layout/FooterComponent";
-
-export default {
-  components: {HeaderComponent, MainComponent, FooterComponent}
-
-}
-</script>

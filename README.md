@@ -3,7 +3,6 @@
 ## Project setup
 ```
 npm install
-puppa boda
 ```
 
 ### Compiles and hot-reloads for development
