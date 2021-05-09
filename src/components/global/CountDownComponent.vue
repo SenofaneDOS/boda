@@ -2,12 +2,23 @@
   <div>
     <div
       v-if="currentTime"
-      class="font-body text-center grid grid-flow-col gap-10 text-white text-7xl my-40 mx-28"
+      class="font-body text-center max-w-7xl grid md:grid-cols-2 lg:grid-cols-4 gap-10 my-0 mx-auto px-5 text-5xl text-white"
     >
-      <span v-if="days">Giorni <br>{{ days }}</span> .
-      <span v-if="hours">Ore <br>{{ hours }}</span> .
-      <span v-if="minutes">Minuti <br>{{ minutes }}</span> .
-      <span> Secondi <br>{{ seconds }}</span>
+      <div
+        v-if="days"
+        class="flex flex-col"
+      >
+        <span>Giorni</span><span>{{ days }}</span>
+      </div>
+      <div class="flex flex-col">
+        <span>Ore</span><span>{{ hours }}</span>
+      </div>
+      <div class="flex flex-col">
+        <span>Minuti</span><span>{{ minutes }}</span>
+      </div>
+      <div class="flex flex-col">
+        <span>Secondi</span><span>{{ seconds }}</span>
+      </div>
     </div>
   </div>
 </template>

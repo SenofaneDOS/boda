@@ -1,8 +1,8 @@
 <template>
-  <div class="wrapper font-body text-white">
-    <div class="inner">
+  <div class="wrapper font-body  max-w-lg my-20 mx-auto text-white border-8 border-solid">
+    <div class="inner w-full p-5">
       <h3>RSVP</h3>
-      <p>Conferma la tua presenza entro il BOOOOOOOOOOOOH.</p>
+      <p>Conferma la tua presenza entro il <strong>1° di Agosto</strong></p>
       <label class="form-group">
         <input
           id="nome"
@@ -138,22 +138,13 @@ a:hover {
 
 .wrapper {
   min-height: 100vh;
+  border-color:#FEEDBA;
   display: flex;
   align-items: center;
   /* background: url("../images/bg-registration-form-7.jpg") no-repeat; */
   background-size: cover; }
 
-.inner {
-  max-width: 758px;
-  margin: auto;
-  background: rgba(46, 45, 42, var(--tw-bg-opacity));
-  border: 10px solid #FEEDBA;
-  padding: 77px 99px 87px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
+
 
 textarea {
   resize: none; }
@@ -294,9 +285,7 @@ button {
     -ms-box-shadow: none;
     -o-box-shadow: none; }
 
-  .wrapper {
-    background: #FEEDBA;
-    border: 10px solid #FEEDBA; } }
+}
 
 /*# sourceMappingURL=style.css.map */
 

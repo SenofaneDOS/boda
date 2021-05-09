@@ -1,15 +1,15 @@
 <template>
-  <div class="container my-40 mx-28">
-    <div class="text-container grid gap-10 text-center text-9xl text-white">
+  <div class="container my-0 mx-auto px-5">
+    <div class="text-container grid gap-10 text-center text-8xl text-white">
       <span> Playlist</span>
     </div>
     <div class="font-body text-center">
-      <span class="text-4xl text-white">Aiutateci a scegliere la playlist per la nostra festa<br> se hai in mente una canzone che vorresti sentire consigliacela qui sotto</span>
+      <span class="text-3xl text-white">Aiutateci a scegliere la playlist per la nostra festa<br> se hai in mente una canzone che vorresti sentire consigliacela qui sotto</span>
       <div class="container__item my-16">
         <input
           id="playlistText"
           type="text"
-          class="form__field"
+          class="form__field w-60 sm:w-full sm:max-w-lg"
           placeholder="Scrivi una canzone"
         >
         <button
@@ -22,9 +22,9 @@
       <span class="text-4xl text-white">L'intelligenza artificiale creata per l'occasione ti risponderà con un giudizio sui tuoi gusti musicali</span>
     </div>
   </div>
-  <div class="hover_bkgr_fricc font-body text-4xl">
+  <div class="hover_bkgr_fricc font-body text-2xl sm:text-3xl md:text-4xl px-5">
     <span class="helper" />
-    <div>
+    <div class="p-5">
       <span id="AIoutput" />
     </div>
   </div>
@@ -51,7 +51,6 @@ methods:{
 				}
 			)
 			$("#playlistText").val("");
-      //porcatona megagalattica della morte fotonica
       $('.hover_bkgr_fricc').click(function(){
         $('.hover_bkgr_fricc').hide();
       });
@@ -135,7 +134,6 @@ methods:{
   }
   
   .form__field {
-    width: 50%;
     background: #fff;
     color: #a3a3a3;
     font: inherit;
@@ -169,13 +167,11 @@ methods:{
     box-shadow: 10px 10px 60px #555;
     display: inline-block;
     height: auto;
-    /* max-width: 551px; */
+    max-width: 551px;
     min-height: 100px;
     vertical-align: middle;
-    width: 60%;
     position: relative;
     border-radius: 8px;
-    padding: 15px 5%;
 }
 .popupCloseButton {
     background-color: #fff;

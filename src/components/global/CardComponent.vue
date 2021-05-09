@@ -1,6 +1,6 @@
 <template>
-  <div class="card-container grid grid-flow-col gap-20 justify-center">
-    <div class="w-96 shadow-sm hover:shadow-lg rounded-lg bg-white">
+  <div class="card-container grid lg:grid-flow-col lg:px-60 my-20 gap-20 justify-center">
+    <div class="w-10/12 lg:w-screen lg:max-w-md xl:max-w-xl mx-auto my-0 shadow-sm hover:shadow-lg rounded-lg bg-white">
       <div class="group w-full h-96 relative">
         <img
           class="w-full h-full object-cover block rounded"
@@ -20,7 +20,7 @@
         </p>
       </div>
     </div>
-    <div class="w-96 shadow-sm hover:shadow-lg rounded-lg bg-white">
+    <div class="w-10/12 lg:w-screen lg:max-w-md xl:max-w-xl mx-auto my-0 shadow-sm hover:shadow-lg rounded-lg bg-white">
       <div class="group w-full h-96 relative">
         <img
           class="w-full h-full object-cover block rounded"
