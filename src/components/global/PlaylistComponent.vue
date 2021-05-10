@@ -141,6 +141,7 @@ methods:{
     border: 0;
     outline: 0;
     padding: 22px 18px;
+    min-width: 300px;
   }
 
 /* fine playlist form */
