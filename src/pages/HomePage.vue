@@ -28,6 +28,38 @@
     <CardComponent />
     <PlaylistComponent />
     <RSVPComponent />
+
+    <div class="container my-40 mx-auto px-5">
+      <div class="text-container grid gap-10 text-center text-8xl text-white">
+        <span>Lista i nozze</span>
+      </div>
+      <div class="font-body text-center">
+        <span class="text-3xl text-white">Per chi volesse partecipare al nostro viaggio di nozze</span>
+      </div>
+      <br>
+      <br>
+      <div class="font-body text-center">
+        <span class="text-3xl text-white">IT77P0100503295000000003015</span>
+      </div>
+    </div>
+
+    <div class="container my-40 mx-auto px-5">
+      <div class="text-container grid gap-10 text-center text-8xl text-white">
+        <span>Contatti</span>
+      </div>
+      <div class="grid grid-cols-2 gap-4 font-body">
+        <div class="text-center text-white mt-8">
+          <span class="text-4xl mt-8">Maria<br></span>
+          <span class="mt-8">Telefono: 3392816262<br></span>
+          <span class="mt-8">Email: maria.alvaro95@gmail.com<br></span>
+        </div>
+        <div class="text-center text-white mt-8">
+          <span class="text-4xl mt-8">Stefano<br></span>
+          <span class="mt-8">Telefono: 3341278094<br></span>
+          <span class="mt-8">Email: pepistefano9@gmail.com<br></span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
