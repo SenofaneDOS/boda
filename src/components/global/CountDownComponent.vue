@@ -2,7 +2,7 @@
   <div>
     <div
       v-if="currentTime"
-      class="font-body text-center max-w-7xl grid md:grid-cols-2 lg:grid-cols-4 gap-10 my-0 mx-auto px-5 text-5xl text-white"
+      class="font-body text-center max-w-7xl grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-44 mt-16 mx-auto px-5 text-5xl text-white"
     >
       <div
         v-if="days"

@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-0 mx-auto px-5">
+  <div class="container mb-44 mt-16 mx-auto px-5">
     <div class="text-container grid gap-10 text-center text-8xl text-white">
       <span> Playlist</span>
     </div>
