@@ -31,7 +31,7 @@
 
     <div class="container my-40 mx-auto px-5">
       <div class="text-container grid gap-10 text-center text-8xl text-white">
-        <span>Lista i nozze</span>
+        <span>Lista di nozze</span>
       </div>
       <div class="font-body text-center">
         <span class="text-3xl text-white">Per chi volesse partecipare al nostro viaggio di nozze</span>
