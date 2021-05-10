@@ -34,7 +34,7 @@
         <span>Lista di nozze</span>
       </div>
       <div class="font-body text-center">
-        <span class="text-3xl text-white">Per chi volesse partecipare al nostro viaggio di nozze</span>
+        <span class="text-3xl text-white">Per chi volesse contribuire al nostro viaggio di nozze</span>
       </div>
       <br>
       <br>
