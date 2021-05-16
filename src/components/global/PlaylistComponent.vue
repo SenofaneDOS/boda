@@ -21,89 +21,185 @@
       </div>
       <span class="text-4xl text-white">L'intelligenza artificiale creata per l'occasione ti risponderà con un giudizio sui tuoi gusti musicali</span>
     </div>
+    <!-- <div
+
+      class="loader"
+    /> -->
   </div>
+
   <div class="hover_bkgr_fricc font-body text-2xl sm:text-3xl md:text-4xl px-5">
     <span class="helper" />
     <div class="p-5">
-      <span id="AIoutput" />
+      Ho trovato "<span id="songTitle" />" di "<span id="songArtist" />"
+      <br>
+      <br>
+      <img
+        id="songImage"
+        style="margin-left: auto;margin-right: auto;display: block;"
+        src="#"
+        width="200"
+        height="200"
+      >
+      <br>
+      <span id="songEsito" />
     </div>
   </div>
+
+  <!-- <div class="hover_bkgr_fricc flex flex-row flex-wrap justify-center font-body">
+    <div class="text-center mt-8 mr-5">
+      <span class="text-4xl">Maria<br></span>
+      <span id="AIoutput">Telefono: 3392816262<br></span>
+      <span>Email: maria.alvaro95@gmail.com<br></span>
+    </div>
+    <div class="text-center mt-8">
+      <span class="text-4xl">Stefano<br></span>
+      <span>Telefono: 3341278094<br></span>
+      <span>Email: pepistefano9@gmail.com<br></span>
+    </div>
+  </div> -->
+
+  <!-- <button @click="turnOn()">
+    bottone
+  </button> -->
 </template>
 
 <script>
 import axios from 'axios'
 export default {
+  props: {
+    type: [ Boolean ]
+  },
 methods:{
+    // turnOn()
+    // {
+    //     this.loading = true,
+    //     console.log(this.loading)
+    // },
 		async insertPlaylist(){
+      // -------------------- insert fauna --------------------
       if($("#playlistText").val() == "")
       {
         $('.hover_bkgr_fricc').click(function(){
            $('.hover_bkgr_fricc').hide();
         });
-        $("#AIoutput").text("Se non ti viene in mente nessuna canzone puoi anche sentirti libero di non cliccare quel bottone!");
+        $("#songTitle").text("Se non ti viene in mente nessuna canzone sentiti libero di non cliccare quel bottone!");
         $('.hover_bkgr_fricc').show();
       }
       else{
-      await axios.post(
-			'/.netlify/functions/playlistInsert',
-				{
-					title: $("#playlistText").val(),
-				}
-			)
-			$("#playlistText").val("");
+      // await axios.post(
+			// '/.netlify/functions/playlistInsert',
+			// 	{
+			// 		title: $("#playlistText").val(),
+			// 	}
+			// )
       $('.hover_bkgr_fricc').click(function(){
         $('.hover_bkgr_fricc').hide();
-      });
+			  $("#songTitle").text("");
+			  $("#songArtist").text("");
+			  $("#songImage").hide();
+        $("#songEsito").text("");
 
-      await axios.get(
+      });
+      //-------------------- end nsert fauna --------------------
+      var title;
+      var artist;
+      var esito;
+      var image;
+      await axios.post(
 			'/.netlify/functions/machineLearning',
 				{
 					title: $("#playlistText").val(),
 				}
 			).then(response =>{
-        $("#AIoutput").text(response.data);
+        if(response.data.data.response.hits.length > 0)
+        {
+          // console.log(response);
+          title=response.data.data.response.hits[0].result.title;
+          artist=response.data.data.response.hits[0].result.primary_artist.name;
+          esito=response.data.data.esito;
+          image = response.data.data.response.hits[0].result.song_art_image_url;
+          $("#songTitle").text(title);
+          $("#songArtist").text(artist);
+          $("#songImage").attr("src", image);
+          $("#songImage").show();
+          $("#songEsito").text(esito);
+          
+        }
+        else{
+          $("#songTitle").text("mm non ho trovato questa canzone");
+  			  $("#songImage").hide();
+        }
       }).catch(err =>{
       console.log(err);
       })
+
+      await axios.post(
+			'/.netlify/functions/playlistInsert',
+				{
+					title: $("#playlistText").val(),
+          titleGenius : title,
+          artistGenius : artist,
+          esitoGenius : esito
+				}
+			)
+
       $('.hover_bkgr_fricc').show();
       }
-		
+			$("#playlistText").val("");
+
+
+
 		}
 	}}
 </script>
 
 <style scoped>
+.loader{  /* spinner */
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:100%;
+    height:100%;
+    background-color:#eceaea;
+    background-image: url('../../assets/images/spinner.gif');
+    background-size: 50px;
+    background-repeat:no-repeat;
+    background-position:center;
+    z-index:10000000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
 /* form playlist form */
 :root {
     background: #f5f6fa;
     color: #9c9c9c;
     font: 1rem "PT Sans", sans-serif;
   }
-  
+
   html,
   body,
   .container {
     height: 100%;
   }
-  
+
   a {
     color: inherit;
   }
   a:hover {
     color: #FEEDBA;
   }
-  
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  
+
   .uppercase {
     text-transform: uppercase;
   }
-  
+
   .btn {
     display: inline-block;
     background: transparent;
@@ -132,7 +228,7 @@ methods:{
   .btn--inside {
     margin-left: -96px;
   }
-  
+
   .form__field {
     background: #fff;
     color: #a3a3a3;

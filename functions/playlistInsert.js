@@ -10,7 +10,6 @@ const client = new faunadb.Client({
 exports.handler = (event, context, callback) => {
   /* parse the string body into a useable JS object */
   const data = JSON.parse(event.body)
-  console.log("Function `todo-create` invoked", data)
   const item = {
     data: data
   }
@@ -24,7 +23,6 @@ exports.handler = (event, context, callback) => {
       body: JSON.stringify(response)
     })
   }).catch((error) => {
-    console.log("error", error)
     /* Error! return the error with statusCode 400 */
     return callback(null, {
       statusCode: 400,
