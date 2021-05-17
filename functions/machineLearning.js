@@ -8,7 +8,6 @@ exports.handler = async (event, context, callback) => {
     "Un po' vecchiotta ma decisamente azzeccata",
     "Bella",
     "Carina",
-    "Che gusti di m***a",
     "Ti ricordo che è un matrimonio non un funerale...",
     "Azzeccata",
     "Bella idea, grazie!",
