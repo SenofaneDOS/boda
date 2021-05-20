@@ -70,6 +70,37 @@
       </button>
     </div>
   </div>
+
+  <div class="hover_bkgr_friccc font-body text-2xl sm:text-3xl md:text-4xl px-5">
+    <span class="helper" />
+    <div class="p-5">
+      <span id="AIoutput" />
+      <!-- Ho trovato "<span id="songTitle" />" di "<span id="songArtist" />"
+      <br>
+      <br>
+      <img
+        id="songImage"
+        style="margin-left: auto;margin-right: auto;display: block;"
+        src="#"
+        width="200"
+        height="200"
+      >
+      <br>
+      <span id="songEsito" /> -->
+    </div>
+  </div>
+
+  <!-- <div
+    id="rsvpModal"
+    class="flex flex-row flex-wrap justify-center font-body"
+  >
+    <div class="text-center mt-8 mr-5">
+      <span
+        id="AIoutput"
+        class="text-4xl"
+      ><br></span>
+    </div>
+  </div> -->
 </template>
 
 <script>
@@ -79,11 +110,11 @@ methods:{
 		async insertRSVP(){
       if($("#nome").val() == "")
       {
-        $('.hover_bkgr_fricc').click(function(){
-           $('.hover_bkgr_fricc').hide();
+        $('.hover_bkgr_friccc').click(function(){
+           $('.hover_bkgr_friccc').hide();
         });
         $("#AIoutput").text("Inserisci il nome per favore");
-        $('.hover_bkgr_fricc').show();
+        $('.hover_bkgr_friccc').show();
       }
       else{
       await axios.post(
@@ -95,11 +126,11 @@ methods:{
           messaggio : $("#messaggio").val()
 				}
 			)
-      $('.hover_bkgr_fricc').click(function(){
-        $('.hover_bkgr_fricc').hide();
+      $('.hover_bkgr_friccc').click(function(){
+        $('.hover_bkgr_friccc').hide();
       });
       $("#AIoutput").text("Grazie per la risposta");
-      $('.hover_bkgr_fricc').show();
+      $('.hover_bkgr_friccc').show();
 
       }
 		
@@ -109,6 +140,63 @@ methods:{
 
 
 <style scoped>
+/* Popup box BEGIN */
+.hover_bkgr_friccc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_friccc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_friccc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 8px;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_friccc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
