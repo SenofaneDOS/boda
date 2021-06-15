@@ -69,8 +69,22 @@
         <i class="zmdi zmdi-arrow-right" />
       </button>
     </div>
+    <transition
+      appear
+      name="loader"
+    >
+      <div
+        v-if="submitting"
+        class="fixed flex items-center justify-center inset-0 bg-opacity-30 bg-white"
+      >
+        <image-component
+          loader
+          size="w-28 my-0 mx-auto"
+          color="text-white"
+        />
+      </div>
+    </transition>
   </div>
-
   <div class="hover_bkgr_friccc font-body text-2xl sm:text-3xl md:text-4xl px-5">
     <span class="helper" />
     <div class="p-5">
@@ -105,7 +119,14 @@
 
 <script>
 import axios from 'axios'
+import ImageComponent from './ImageComponent.vue';
 export default {
+  components: { ImageComponent },
+  data(){
+    return{
+      submitting: false
+    }
+  },
 methods:{
 		async insertRSVP(){
       if($("#nome").val() == "")
@@ -117,6 +138,7 @@ methods:{
         $('.hover_bkgr_friccc').show();
       }
       else{
+        this.submitting = true
       await axios.post(
 			'/.netlify/functions/RSVPInsert',
 				{
@@ -126,6 +148,7 @@ methods:{
           messaggio : $("#messaggio").val()
 				}
 			)
+       this.submitting = false
       $('.hover_bkgr_friccc').click(function(){
         $('.hover_bkgr_friccc').hide();
       });
@@ -375,6 +398,14 @@ button {
 
 }
 
-/*# sourceMappingURL=style.css.map */
+.loader-enter-active,
+.loader-leave-active{
+  transition: all 0.5s ease;
+}
+
+.loader-enter-from,
+.loader-leave-to {
+  opacity: 0;
+}
 
 </style>
