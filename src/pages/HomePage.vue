@@ -5,22 +5,34 @@
       src="../assets/images/bulb.png"
     >
     <div class="home-body w-full grid lg:grid-flow-col gap-5 justify-around items-center px-10">
-      <image-component
-        class="row-start-2 row-end-2 col-start-1 col-end-1 lg:row-start-1 lg:row-end-1 lg:col-start-1 lg:col-end-1"
-        maria
-        size="w-28 sm:w-40 md:w-56 my-0 mx-auto"
-        color="text-white"
-      />
+      <transition
+        appear
+        name="maria"
+      >
+        <image-component
+          v-if="show"
+          class="row-start-2 row-end-2 col-start-1 col-end-1 lg:row-start-1 lg:row-end-1 lg:col-start-1 lg:col-end-1"
+          maria
+          size="w-28 sm:w-40 md:w-56 my-0 mx-auto"
+          color="text-white"
+        />
+      </transition>
       <div class="text-container row-start-1 row-end-1 col-start-1 col-end-3 lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1 grid gap-10 px-10 text-center text-8xl md:text-9xl text-white">
         <span class="write"> Maria & Stefano</span>
         <span class="font-body text-4xl break-words">8 settembre 2021</span>
       </div>
-      <image-component
-        class="row-start-2 row-end-2 col-start-2 col-end-2 lg:row-start-1 lg:row-end-1 lg:col-start-3 lg:col-end-3"
-        stefano
-        size="w-28 sm:w-40 md:w-56 my-0 mx-auto"
-        color="text-white"
-      />
+      <transition
+        appear
+        name="stefano"
+      >
+        <image-component
+          v-if="show"
+          class="row-start-2 row-end-2 col-start-2 col-end-2 lg:row-start-1 lg:row-end-1 lg:col-start-3 lg:col-end-3"
+          stefano
+          size="w-28 sm:w-40 md:w-56 my-0 mx-auto"
+          color="text-white"
+        />
+      </transition>
     </div>
     <div id="countdown">
       <count-down-component deadline="09/08/2021" />
@@ -73,6 +85,36 @@ import RSVPComponent from '../components/global/RSVPComponent.vue'
 
 export default {
   components: { ImageComponent, CountDownComponent, CardComponent, PlaylistComponent, RSVPComponent },
-
+  data(){
+    return{
+      show: false
+    }
+  },
+  mounted(){
+    this.show = true
+  },
 }
 </script>
+<style scoped>
+.maria-enter-active,
+.maria-leave-active,
+.stefano-enter-active,
+.stefano-leave-active {
+  transition: all 0.5s ease;
+}
+
+.maria-enter-from,
+.maria-leave-to,
+.stefano-enter-from,
+.stefano-leave-to {
+  opacity: 0;
+}
+.maria-enter-from,
+.maria-leave-to{
+    transform: translateX(-100%);
+}
+.stefano-enter-from,
+.stefano-leave-to {
+  transform: translateX(100%);
+}
+</style>
