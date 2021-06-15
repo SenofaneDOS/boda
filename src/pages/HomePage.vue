@@ -61,11 +61,23 @@
       </div>
       <div class="flex flex-row flex-wrap justify-center font-body">
         <div class="text-center text-white mt-8  mr-5">
+          <image-component
+            class=""
+            maria
+            size="w-20 h-auto mt-10 mb-8 mx-auto"
+            color="text-white"
+          />
           <span class="text-4xl">Maria<br></span>
           <span>Telefono: 3392816262<br></span>
           <span>Email: maria.alvaro95@gmail.com<br></span>
         </div>
         <div class="text-center text-white mt-8">
+          <image-component
+            class=""
+            stefano
+            size="w-20 h-auto my-10 mx-auto"
+            color="text-white"
+          />
           <span class="text-4xl">Stefano<br></span>
           <span>Telefono: 3341278094<br></span>
           <span>Email: pepistefano9@gmail.com<br></span>
