@@ -21,10 +21,21 @@
       </div>
       <span class="text-4xl text-white">L'intelligenza artificiale creata per l'occasione ti risponderà con un giudizio sui tuoi gusti musicali</span>
     </div>
-    <!-- <div
-
-      class="loader"
-    /> -->
+    <transition
+      appear
+      name="loader"
+    >
+      <div
+        v-if="submitting"
+        class="fixed flex items-center justify-center inset-0 bg-opacity-30 bg-white"
+      >
+        <image-component
+          loader
+          size="w-28 my-0 mx-auto"
+          color="text-white"
+        />
+      </div>
+    </transition>
   </div>
 
   <div class="hover_bkgr_fricc font-body text-2xl sm:text-3xl md:text-4xl px-5">
@@ -44,37 +55,22 @@
       <span id="songEsito" />
     </div>
   </div>
-
-  <!-- <div class="hover_bkgr_fricc flex flex-row flex-wrap justify-center font-body">
-    <div class="text-center mt-8 mr-5">
-      <span class="text-4xl">Maria<br></span>
-      <span id="AIoutput">Telefono: 3392816262<br></span>
-      <span>Email: maria.alvaro95@gmail.com<br></span>
-    </div>
-    <div class="text-center mt-8">
-      <span class="text-4xl">Stefano<br></span>
-      <span>Telefono: 3341278094<br></span>
-      <span>Email: pepistefano9@gmail.com<br></span>
-    </div>
-  </div> -->
-
-  <!-- <button @click="turnOn()">
-    bottone
-  </button> -->
 </template>
 
 <script>
 import axios from 'axios'
+import ImageComponent from './ImageComponent.vue';
 export default {
+  components: { ImageComponent },
   props: {
     type: [ Boolean ]
   },
+  data(){
+    return{
+    submitting: false
+    }
+  },
 methods:{
-    // turnOn()
-    // {
-    //     this.loading = true,
-    //     console.log(this.loading)
-    // },
 		async insertPlaylist(){
       // -------------------- insert fauna --------------------
       if($("#playlistText").val() == "")
@@ -86,12 +82,6 @@ methods:{
         $('.hover_bkgr_fricc').show();
       }
       else{
-      // await axios.post(
-			// '/.netlify/functions/playlistInsert',
-			// 	{
-			// 		title: $("#playlistText").val(),
-			// 	}
-			// )
       $('.hover_bkgr_fricc').click(function(){
         $('.hover_bkgr_fricc').hide();
 			  $("#songTitle").text("");
@@ -105,6 +95,7 @@ methods:{
       var artist;
       var esito;
       var image;
+      this.submitting = true
       await axios.post(
 			'/.netlify/functions/machineLearning',
 				{
@@ -130,6 +121,7 @@ methods:{
   			  $("#songImage").hide();
         }
       }).catch(err =>{
+      this.submitting = false
       console.log(err);
       })
 
@@ -142,7 +134,7 @@ methods:{
           esitoGenius : esito
 				}
 			)
-
+       this.submitting = false
       $('.hover_bkgr_fricc').show();
       }
 			$("#playlistText").val("");
@@ -297,5 +289,13 @@ methods:{
     display: inline-block;
     font-weight: bold;
 }
-/* Popup box BEGIN */
+.loader-enter-active,
+.loader-leave-active{
+  transition: all 0.5s ease;
+}
+
+.loader-enter-from,
+.loader-leave-to {
+  opacity: 0;
+}
 </style>
