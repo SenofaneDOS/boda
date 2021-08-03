@@ -52,6 +52,13 @@
       <br>
       <div class="font-body text-center">
         <span class="text-3xl text-white break-all">IT77P0100503295000000003015</span>
+        <br>
+        <span class="text-3xl text-white">Beneficiario: Stefano Pepi</span>
+      </div>
+      <br>
+      <br>
+      <div class="font-body text-center">
+        <span class="text-3xl text-white break-all">per favore no oggetti della thun</span>
       </div>
     </div>
 
