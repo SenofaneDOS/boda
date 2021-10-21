@@ -91,6 +91,19 @@
         </div>
       </div>
     </div>
+
+    <div id="gallery">
+      <img src="https://i.imgur.com/vPsvV9z.jpg">
+      <img src="https://i.imgur.com/inobIzW.jpg">
+      <img src="https://i.imgur.com/sERmoFT.jpg">
+      <img src="https://i.imgur.com/T1nPKU1.jpg">
+      <img src="https://i.imgur.com/wQ4EMlE.jpg">
+      <img src="https://i.imgur.com/tHxVUZp.jpg">
+      <img src="https://i.imgur.com/b7PVup4.jpg">
+      <img src="https://i.imgur.com/S5Wcudo.jpg">
+      <img src="https://i.imgur.com/tJdXwML.jpg">
+      <img src="https://i.imgur.com/9NDQF2x.jpg">
+    </div>
   </div>
 </template>
 
@@ -115,6 +128,54 @@ export default {
 }
 </script>
 <style scoped>
+#gallery {
+   line-height:0;
+   -webkit-column-count:5; /* split it into 5 columns */
+   -webkit-column-gap:5px; /* give it a 5px gap between columns */
+   -moz-column-count:5;
+   -moz-column-gap:5px;
+   column-count:5;
+   column-gap:5px;
+}
+
+#gallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
+   transition: filter 2s;
+}
+#gallery img:hover {
+   filter:none;
+}
+@media (max-width: 1200px) {
+   #gallery {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+   }
+}
+@media (max-width: 1000px) {
+   #gallery {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+   }
+}
+@media (max-width: 800px) {
+   #gallery {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+   }
+}
+@media (max-width: 400px) {
+   #gallery {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+   }
+}
+
 .maria-enter-active,
 .maria-leave-active,
 .stefano-enter-active,
